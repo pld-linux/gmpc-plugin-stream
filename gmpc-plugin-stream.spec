@@ -14,13 +14,14 @@ Source0:	%{source_name}-%{version}.tar.gz
 # Source0-md5:	da8341cf96d9e3885bd78a56ef13cd03
 Patch0:		%{name}-plugins_path.patch
 URL:		http://sarine.nl/gmpc-plugins-autoplaylist
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gmpc-devel >= 0.14.0
 BuildRequires:	gnome-vfs2-devel
 BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +47,6 @@ Music Player Client.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_libdir}/gmpc
 
 %{__make} install \
