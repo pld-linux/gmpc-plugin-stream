@@ -1,0 +1,13 @@
+diff -urN gmpc-shout-0.15.5.0/src/Makefile.am gmpc-shout-0.15.5.0.new/src/Makefile.am
+--- gmpc-shout-0.15.5.0/src/Makefile.am	2007-11-29 14:57:39.000000000 +0100
++++ gmpc-shout-0.15.5.0.new/src/Makefile.am	2008-02-04 09:49:49.689666519 +0100
+@@ -1,7 +1,7 @@
+ #bin_PROGRAMS=osdplugin_la
+-libdir=${prefix}/share/gmpc/plugins/
++pluginsdir=$(libdir)/gmpc/
+ 
+-lib_LTLIBRARIES = shoutplugin.la
++plugins_LTLIBRARIES = shoutplugin.la
+ 
+ shoutplugin_la_SOURCES=	\
+ 	plugin.c	
